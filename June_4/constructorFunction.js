@@ -39,3 +39,8 @@ Student.prototype.shouldNotOverride = function(){
 }
 
 
+// Student.prototype.constructor === Person (will be true.)
+// Here, we made Student.prototype with a copy of object and created Person.prototype. But, the constructor property of Student.prototype still points to Person.prototype. So, we need to re-assign it.
+
+Student.prototype.constructor = Student;
+
